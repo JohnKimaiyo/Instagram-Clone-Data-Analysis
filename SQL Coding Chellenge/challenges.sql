@@ -11,3 +11,12 @@ SELECT
 FROM users
 GROUP BY 1
 ORDER BY 2 DESC;
+
+-- /*We want to target our inactive users with an email campaign.--
+
+SELECT username
+FROM users
+LEFT JOIN photos ON users.id = photos.user_id
+WHERE photos.id IS NULL;
+SELECT username
+ FROM ig_clone.users;
